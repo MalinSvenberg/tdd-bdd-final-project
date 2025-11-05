@@ -51,8 +51,8 @@ Scenario: Read a Product
     Then I should see the message "Success"
     And I should see "Hat" in the "Name" field
     And I should see "A red fedora" in the "Description" field
-    And I should see "True" in the "Available" field
-    And I should see "Cloths" in the "Category" field
+    And I should see "True" in the "Available" dropdown
+    And I should see "Cloths" in the "Category" dropdown
     And I should see "59.95" in the "Price" field
 
 Scenario: Updating a Product
@@ -72,8 +72,8 @@ Scenario: Updating a Product
     And I should see "Hej" in the "Description" field
     And I should not see "A red fedora" in the "Description" field
     And I should see "Hat" in the "Name" field
-    And I should see "True" in the "Available" field
-    And I should see "Cloths" in the "Category" field
+    And I should see "True" in the "Available" dropdown
+    And I should see "Cloths" in the "Category" dropdown
     And I should see "59.95" in the "Price" field
 
 Scenario: Delete a Product
@@ -127,7 +127,7 @@ Scenario: Searching a Product based on Availability
 Scenario: Searching a Product based on NAme
     When I visit the "Home Page"
     And I press the "Clear" button
-    And I set "Name" to "Big Mac"
+    And I set the "Name" to "Big Mac"
     And I press the "Search" button
     Then I should see the message "Success"
     And I should see "Big Mac" in the "Name" field
